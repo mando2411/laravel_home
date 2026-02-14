@@ -1,16 +1,15 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
-    return view('home');
-});
 
-/*
-|--------------------------------------------------------------------------
-| TEST DATABASE (مؤقت للاختبار)
-|--------------------------------------------------------------------------
-*/
-Route::get('/test-db', function () {
-    return config('database.connections.mysql');
+    $products = DB::table('wp_posts')
+        ->where('post_type', 'product')
+        ->where('post_status', 'publish')
+        ->orderBy('post_date', 'desc')
+        ->limit(8)
+        ->get();
+
+    return view('home', compact('products'));
 });
