@@ -6,14 +6,17 @@
     <title>Styliiiish | فساتين سهرة وزفاف في مصر</title>
     <style>
         :root {
+            --wf-main-rgb: 213, 21, 34;
+            --wf-main-color: rgb(var(--wf-main-rgb));
+            --wf-secondary-color: #17273B;
             --bg: #f6f7fb;
             --card: #ffffff;
             --text: #17273B;
             --muted: #5a6678;
             --line: rgba(189, 189, 189, 0.4);
-            --primary: #d51522;
+            --primary: var(--wf-main-color);
             --primary-2: #b70f1a;
-            --secondary: #17273B;
+            --secondary: var(--wf-secondary-color);
             --success: #0a8f5b;
             --soft: #ffeef0;
             --footer-bg: #0f1a2a;
@@ -373,6 +376,23 @@
             font-size: 13px;
         }
 
+        .footer-mini-nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 18px;
+        }
+
+        .footer-mini-nav a {
+            color: var(--footer-soft);
+            font-size: 13px;
+        }
+
+        .footer-mini-nav a:hover {
+            color: #fff;
+        }
+
         .footer-note {
             text-align: center;
             color: var(--muted);
@@ -600,8 +620,16 @@
         </div>
 
         <div class="container footer-bottom">
-            <span>Copyright © {{ date('Y') }} Styliiiish</span>
+            <span>Copyright © {{ date('Y') }} Styliiiish | Powered by <a href="https://websiteflexi.com/" target="_blank" rel="noopener">Website Flexi</a></span>
             <span><a href="https://styliiiish.com/" target="_blank" rel="noopener">styliiiish.com</a></span>
+        </div>
+
+        <div class="container footer-mini-nav">
+            <a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a>
+            <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">Shop</a>
+            <a href="https://styliiiish.com/cart/" target="_blank" rel="noopener">Cart</a>
+            <a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">My Account</a>
+            <a href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">Wishlist</a>
         </div>
     </footer>
 
