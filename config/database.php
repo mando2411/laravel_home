@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Str;
-if (file_exists('/home/u281896900/domains/styliiiish.com/public_html/wp-config.php')) {
-    require_once '/home/u281896900/domains/styliiiish.com/public_html/wp-config.php';
-}
+
+$wp_config = file_get_contents('/home/u281896900/domains/styliiiish.com/public_html/wp-config.php');
+
+preg_match("/define\(\s*'DB_NAME'\s*,\s*'(.+?)'\s*\)/", $wp_config, $db_name);
+preg_match("/define\(\s*'DB_USER'\s*,\s*'(.+?)'\s*\)/", $wp_config, $db_user);
+preg_match("/define\(\s*'DB_PASSWORD'\s*,\s*'(.+?)'\s*\)/", $wp_config, $db_pass);
+preg_match("/define\(\s*'DB_HOST'\s*,\s*'(.+?)'\s*\)/", $wp_config, $db_host);
 
 return [
 
