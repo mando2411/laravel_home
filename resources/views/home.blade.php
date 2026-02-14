@@ -6,15 +6,18 @@
     <title>Styliiiish | فساتين سهرة وزفاف في مصر</title>
     <style>
         :root {
-            --bg: #fffafc;
+            --bg: #f6f7fb;
             --card: #ffffff;
-            --text: #1f1f24;
-            --muted: #6f6f7b;
-            --line: #ececf2;
-            --primary: #8f2357;
-            --primary-2: #b42f6f;
+            --text: #17273B;
+            --muted: #5a6678;
+            --line: rgba(189, 189, 189, 0.4);
+            --primary: #d51522;
+            --primary-2: #b70f1a;
+            --secondary: #17273B;
             --success: #0a8f5b;
-            --soft: #f9eef4;
+            --soft: #ffeef0;
+            --footer-bg: #0f1a2a;
+            --footer-soft: #b8c2d1;
         }
 
         * { box-sizing: border-box; }
@@ -35,7 +38,7 @@
         }
 
         .promo {
-            background: linear-gradient(90deg, var(--primary), var(--primary-2));
+            background: linear-gradient(90deg, var(--secondary), #24384f);
             color: #fff;
             text-align: center;
             padding: 10px 16px;
@@ -192,6 +195,11 @@
             font-weight: 700;
         }
 
+        .chip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -290,7 +298,7 @@
         }
 
         .final-cta {
-            background: linear-gradient(120deg, #20121a, #3e1b2f);
+            background: linear-gradient(120deg, var(--secondary), #22354a);
             color: #fff;
             border-radius: 18px;
             padding: 28px;
@@ -304,8 +312,65 @@
 
         .final-cta p {
             margin: 0 0 16px;
-            color: #f4dce8;
+            color: #d7e0ed;
             max-width: 740px;
+        }
+
+        .site-footer {
+            margin-top: 8px;
+            background: var(--footer-bg);
+            color: #fff;
+            border-top: 4px solid var(--primary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            gap: 18px;
+            padding: 34px 0 22px;
+        }
+
+        .footer-brand h4,
+        .footer-col h5 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .footer-brand p {
+            margin: 0 0 10px;
+            color: var(--footer-soft);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 7px;
+        }
+
+        .footer-links a {
+            color: var(--footer-soft);
+            font-size: 14px;
+            transition: .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 12px 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--footer-soft);
+            font-size: 13px;
         }
 
         .footer-note {
@@ -322,6 +387,10 @@
             .trust {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         @media (max-width: 640px) {
@@ -334,14 +403,15 @@
             .categories,
             .grid,
             .trust,
-            .stats {
+            .stats,
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="promo">خصومات الموسم وصلت إلى 50% + توصيل داخل مصر خلال 2–10 أيام عمل</div>
+    <div class="promo">Because Every Woman Deserves to Shine • خصومات تصل إلى 50% • توصيل داخل مصر خلال 2–10 أيام عمل</div>
 
     <section class="hero">
         <div class="container hero-wrap">
@@ -482,6 +552,59 @@
         </div>
     </section>
 
-    <div class="footer-note">© {{ date('Y') }} Styliiiish Fashion House</div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h4>Styliiiish Fashion House</h4>
+                <p>We work with a passion of taking challenges and creating new dress designs only for you.</p>
+                <p>Open Hours: Sat – Fri: 11:00 am – 7:00 pm.</p>
+                <p><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Get in Touch</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a></li>
+                    <li><a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">Blog</a></li>
+                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">Shop Dress</a></li>
+                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">Dress Rental</a></li>
+                    <li><a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">MarketPlace</a></li>
+                    <li><a href="https://styliiiish.com/categories/" target="_blank" rel="noopener">Categories</a></li>
+                    <li><a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">Sell Your Dress</a></li>
+                    <li><a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">My account</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Official Info</h5>
+                <ul class="footer-links">
+                    <li><a href="https://maps.app.goo.gl/MCdcFEcFoR4tEjpT8" target="_blank" rel="noopener">1 Nabil Khalil Street, Nasr City, Cairo, Egypt</a></li>
+                    <li><a href="tel:+201050874255">+2 010-5087-4255</a></li>
+                    <li><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul class="footer-links">
+                    <li><a href="https://styliiiish.com/about-us/" target="_blank" rel="noopener">About Us</a></li>
+                    <li><a href="https://styliiiish.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+                    <li><a href="https://styliiiish.com/terms-conditions/" target="_blank" rel="noopener">Terms & Conditions</a></li>
+                    <li><a href="https://styliiiish.com/Marketplace-Policy/" target="_blank" rel="noopener">Marketplace Policy</a></li>
+                    <li><a href="https://styliiiish.com/refund-return-policy/" target="_blank" rel="noopener">Refund & Return Policy</a></li>
+                    <li><a href="https://styliiiish.com/styliiiish-faq/" target="_blank" rel="noopener">FAQ</a></li>
+                    <li><a href="https://styliiiish.com/shipping-delivery-policy/" target="_blank" rel="noopener">Shipping & Delivery Policy</a></li>
+                    <li><a href="https://styliiiish.com/%F0%9F%8D%AA-cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <span>Copyright © {{ date('Y') }} Styliiiish</span>
+            <span><a href="https://styliiiish.com/" target="_blank" rel="noopener">styliiiish.com</a></span>
+        </div>
+    </footer>
+
+    <div class="footer-note">الصفحة الرئيسية مطورة بـ Laravel ومتصلة ببيانات WordPress مباشرة</div>
 </body>
 </html>
