@@ -16,6 +16,10 @@ Route::get('/', function () {
                 $join->on('p.ID', '=', 'regular.post_id')
                      ->where('regular.meta_key', '_regular_price');
             })
+            ->leftJoin('wp_postmeta as sale', function ($join) {
+                $join->on('p.ID', '=', 'sale.post_id')
+                     ->where('sale.meta_key', '_sale_price');
+            })
             ->leftJoin('wp_postmeta as thumb', function ($join) {
                 $join->on('p.ID', '=', 'thumb.post_id')
                      ->where('thumb.meta_key', '_thumbnail_id');
@@ -30,12 +34,53 @@ Route::get('/', function () {
                 'p.post_name',
                 'price.meta_value as price',
                 'regular.meta_value as regular_price',
+                'sale.meta_value as sale_price',
                 'img.guid as image'
             )
-            ->limit(8)
+            ->limit(12)
             ->get();
 
     });
 
-    return view('home', compact('products'));
+    $stats = Cache::remember('home_stats', 300, function () {
+        $base = DB::table('wp_posts')
+            ->where('post_type', 'product')
+            ->where('post_status', 'publish');
+
+        $totalProducts = (clone $base)->count();
+
+        $saleProducts = DB::table('wp_posts as p')
+            ->join('wp_postmeta as sale', function ($join) {
+                $join->on('p.ID', '=', 'sale.post_id')
+                    ->where('sale.meta_key', '_sale_price');
+            })
+            ->where('p.post_type', 'product')
+            ->where('p.post_status', 'publish')
+            ->whereNotNull('sale.meta_value')
+            ->where('sale.meta_value', '!=', '')
+            ->count();
+
+        $prices = DB::table('wp_posts as p')
+            ->join('wp_postmeta as price', function ($join) {
+                $join->on('p.ID', '=', 'price.post_id')
+                    ->where('price.meta_key', '_price');
+            })
+            ->where('p.post_type', 'product')
+            ->where('p.post_status', 'publish')
+            ->whereNotNull('price.meta_value')
+            ->where('price.meta_value', '!=', '')
+            ->pluck('price.meta_value')
+            ->map(fn ($value) => (float) $value)
+            ->filter(fn ($value) => $value > 0)
+            ->values();
+
+        return [
+            'total_products' => $totalProducts,
+            'sale_products' => $saleProducts,
+            'min_price' => $prices->isNotEmpty() ? $prices->min() : null,
+            'max_price' => $prices->isNotEmpty() ? $prices->max() : null,
+        ];
+    });
+
+    return view('home', compact('products', 'stats'));
 });
