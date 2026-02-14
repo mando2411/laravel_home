@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Stylish Dresses</title>
-</head>
-<body>
-    <h1>Welcome to Stylish</h1>
-    <a href="/shop">Shop Now</a>
-</body>
-</html>
+@foreach($products as $product)
+    <div>
+        <h3>{{ $product->post_title }}</h3>
+        <a href="/product/{{ $product->post_name }}">View</a>
+    </div>
+@endforeach
