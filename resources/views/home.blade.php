@@ -82,16 +82,28 @@
             opacity: 1;
         }
 
+        .topbar-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.14);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
         .main-header {
             background: #fff;
             border-bottom: 1px solid var(--line);
             position: sticky;
             top: 0;
             z-index: 40;
+            box-shadow: 0 8px 24px rgba(23, 39, 59, 0.06);
         }
 
         .main-header-inner {
-            min-height: 76px;
+            min-height: 84px;
             display: grid;
             grid-template-columns: auto 1fr auto;
             align-items: center;
@@ -107,8 +119,8 @@
         .brand-title {
             color: var(--secondary);
             font-weight: 900;
-            letter-spacing: .3px;
-            font-size: 22px;
+            letter-spacing: .4px;
+            font-size: 24px;
             line-height: 1;
         }
 
@@ -122,15 +134,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 18px;
+            gap: 8px;
             flex-wrap: wrap;
+            background: #f9fbff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 6px;
         }
 
         .main-nav a {
             color: var(--secondary);
             font-size: 14px;
             font-weight: 700;
-            padding: 8px 10px;
+            padding: 8px 12px;
             border-radius: 8px;
             transition: .2s ease;
         }
@@ -140,10 +156,52 @@
             background: #fff4f5;
         }
 
+        .main-nav a.active {
+            background: #fff4f5;
+            color: var(--primary);
+        }
+
         .header-actions {
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .search-input {
+            border: 0;
+            outline: 0;
+            width: 190px;
+            padding: 0 12px;
+            color: var(--secondary);
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        .search-btn {
+            height: 100%;
+            border: 0;
+            background: var(--secondary);
+            color: #fff;
+            padding: 0 12px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #24384f;
         }
 
         .icon-btn {
@@ -164,6 +222,13 @@
         .icon-btn:hover {
             border-color: var(--primary);
             color: var(--primary);
+        }
+
+        .header-cta {
+            height: 40px;
+            padding: 0 14px;
+            border-radius: 10px;
+            font-size: 13px;
         }
 
         .hero {
@@ -530,6 +595,10 @@
                 text-align: center;
             }
 
+            .search-input {
+                width: 220px;
+            }
+
             .hero-wrap,
             .categories,
             .grid,
@@ -546,6 +615,18 @@
             .hero,
             .section {
                 padding-top: 22px;
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .search-form {
+                width: 100%;
+            }
+
+            .search-input {
+                width: 100%;
             }
 
             .hero-wrap,
@@ -567,6 +648,7 @@
                 <a href="tel:+201050874255">+20 010 5087 4255</a>
             </div>
             <div class="topbar-left">
+                <span class="topbar-note">⚡ خصومات يومية</span>
                 <a href="https://www.facebook.com/Styliiish.Egypt/" target="_blank" rel="noopener">فيسبوك</a>
                 <a href="https://www.instagram.com/styliiish.egypt/" target="_blank" rel="noopener">إنستجرام</a>
                 <a href="https://g.page/styliish" target="_blank" rel="noopener">جوجل</a>
@@ -582,7 +664,7 @@
             </a>
 
             <nav class="main-nav" aria-label="Main Navigation">
-                <a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
+                <a class="active" href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
                 <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">المتجر</a>
                 <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a>
                 <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a>
@@ -591,9 +673,14 @@
             </nav>
 
             <div class="header-actions">
+                <form class="search-form" action="https://styliiiish.com/" method="get" target="_blank">
+                    <input class="search-input" type="search" name="s" placeholder="ابحثي عن فستانك..." aria-label="ابحثي عن فستانك">
+                    <button class="search-btn" type="submit">بحث</button>
+                </form>
                 <a class="icon-btn" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
                 <a class="icon-btn" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
                 <a class="icon-btn" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
+                <a class="btn btn-primary header-cta" href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">ابدئي البيع</a>
             </div>
         </div>
     </header>
