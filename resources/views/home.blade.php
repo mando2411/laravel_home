@@ -769,8 +769,8 @@
             }
 
             .brand {
-                align-items: flex-start;
-                text-align: right;
+                align-items: center;
+                text-align: center;
             }
 
             .brand-title {
