@@ -247,6 +247,25 @@
             border: 1px solid var(--line);
             border-radius: 18px;
             padding: 28px;
+            box-shadow: 0 10px 30px rgba(23, 39, 59, 0.06);
+        }
+
+        .hero-main {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(160deg, #ffffff 0%, #fff8f8 85%);
+        }
+
+        .hero-main::before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(213, 21, 34, 0.11), rgba(213, 21, 34, 0));
+            top: -170px;
+            left: -120px;
+            pointer-events: none;
         }
 
         .badge {
@@ -260,24 +279,83 @@
             font-size: 13px;
             font-weight: 700;
             margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
         }
 
-        h1 {
+        .hero-main h1 {
             margin: 0 0 10px;
-            line-height: 1.25;
-            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.2;
+            font-size: clamp(31px, 4vw, 46px);
+            position: relative;
+            z-index: 1;
         }
 
         .lead {
             margin: 0 0 22px;
             color: var(--muted);
-            font-size: 17px;
+            font-size: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-points {
+            list-style: none;
+            margin: 0 0 16px;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-points li {
+            background: rgba(255, 255, 255, 0.86);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--secondary);
         }
 
         .actions {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-kpis {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-kpi {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hero-kpi strong {
+            display: block;
+            color: var(--primary);
+            font-size: 18px;
+            line-height: 1.1;
+        }
+
+        .hero-kpi span {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .btn {
@@ -304,7 +382,13 @@
 
         .hero-side h3 {
             margin: 0 0 12px;
-            font-size: 20px;
+            font-size: 22px;
+        }
+
+        .hero-side-note {
+            margin: 0 0 12px;
+            color: var(--muted);
+            font-size: 14px;
         }
 
         .list {
@@ -606,6 +690,11 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .hero-points,
+            .hero-kpis {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             .footer-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -635,6 +724,11 @@
             .trust,
             .stats,
             .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-points,
+            .hero-kpis {
                 grid-template-columns: 1fr;
             }
         }
@@ -690,17 +784,41 @@
     <section class="hero">
         <div class="container hero-wrap">
             <div class="hero-main">
-                <span class="badge">✨ لأن كل امرأة تستحق أن تتألق</span>
-                <h1>أفخم فساتين السهرة والزفاف في مصر بأسعار تنافسية</h1>
-                <p class="lead">اختاري إطلالتك القادمة من مجموعة فساتين مختارة بعناية، أو ابدئي بيع فستانك الآن وحوّليه لكاش بسرعة على Styliiiish.</p>
+                <span class="badge">✨ مجموعة حصرية بتحديثات يومية</span>
+                <h1>اختاري فستان أحلامك لمناسبتك القادمة بأفضل قيمة في مصر</h1>
+                <p class="lead">موديلات سهرة وزفاف وخطوبة مختارة بعناية، مع عروض قوية وتجربة شراء سريعة من منصة موثوقة.</p>
+
+                <ul class="hero-points">
+                    <li>✔️ خصومات تصل إلى 50% على موديلات مختارة</li>
+                    <li>✔️ توصيل داخل مصر خلال 2–10 أيام</li>
+                    <li>✔️ خيارات متنوعة للمقاسات والستايلات</li>
+                    <li>✔️ منصة موثوقة للبيع والشراء</li>
+                </ul>
+
                 <div class="actions">
                     <a class="btn btn-primary" href="/shop/">تسوقي الفساتين الآن</a>
                     <a class="btn btn-light" href="/my-dresses/">بيعي فستانك الآن</a>
+                </div>
+
+                <div class="hero-kpis">
+                    <div class="hero-kpi">
+                        <strong>{{ number_format((int)($stats['total_products'] ?? 0)) }}+</strong>
+                        <span>منتج متاح الآن</span>
+                    </div>
+                    <div class="hero-kpi">
+                        <strong>{{ number_format((int)($stats['sale_products'] ?? 0)) }}+</strong>
+                        <span>منتج عليه خصم</span>
+                    </div>
+                    <div class="hero-kpi">
+                        <strong>ثقة عالية</strong>
+                        <span>خدمة ودعم قبل وبعد الطلب</span>
+                    </div>
                 </div>
             </div>
 
             <aside class="hero-side">
                 <h3>لماذا Styliiiish؟</h3>
+                <p class="hero-side-note">مزيج بين جودة التصميم وسهولة الشراء، مع روابط وسياسات واضحة لبناء ثقة حقيقية.</p>
                 <ul class="list">
                     <li>✓ منتجات منشورة مباشرة من متجر ووردبريس لحظيًا</li>
                     <li>✓ فساتين سهرة وزفاف وموديلات محتشمة بألوان ومقاسات متنوعة</li>
