@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styliiiish | فساتين سهرة وزفاف في مصر</title>
+    <title>ستيليش | فساتين سهرة وزفاف في مصر</title>
     <style>
         :root {
             --wf-main-rgb: 213, 21, 34;
@@ -563,13 +563,13 @@
     <div class="topbar">
         <div class="container topbar-inner">
             <div class="topbar-right">
-                <strong>Call Anytime:</strong>
+                <strong>اتصلي بنا في أي وقت:</strong>
                 <a href="tel:+201050874255">+20 010 5087 4255</a>
             </div>
             <div class="topbar-left">
-                <a href="https://www.facebook.com/Styliiish.Egypt/" target="_blank" rel="noopener">Facebook</a>
-                <a href="https://www.instagram.com/styliiish.egypt/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://g.page/styliish" target="_blank" rel="noopener">Google</a>
+                <a href="https://www.facebook.com/Styliiish.Egypt/" target="_blank" rel="noopener">فيسبوك</a>
+                <a href="https://www.instagram.com/styliiish.egypt/" target="_blank" rel="noopener">إنستجرام</a>
+                <a href="https://g.page/styliish" target="_blank" rel="noopener">جوجل</a>
             </div>
         </div>
     </div>
@@ -578,32 +578,32 @@
         <div class="container main-header-inner">
             <a class="brand" href="https://styliiiish.com/" target="_blank" rel="noopener">
                 <span class="brand-title">Styliiiish</span>
-                <span class="brand-tag">Because Every Woman Deserves to Shine</span>
+                <span class="brand-tag">لأن كل امرأة تستحق أن تتألق</span>
             </a>
 
             <nav class="main-nav" aria-label="Main Navigation">
-                <a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a>
-                <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">Shop</a>
-                <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">MarketPlace</a>
-                <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">Sell Your Dress</a>
-                <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">Blog</a>
-                <a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Contact</a>
+                <a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
+                <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">المتجر</a>
+                <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a>
+                <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a>
+                <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">المدونة</a>
+                <a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">تواصل معنا</a>
             </nav>
 
             <div class="header-actions">
-                <a class="icon-btn" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">Account</a>
-                <a class="icon-btn" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">Wishlist</a>
-                <a class="icon-btn" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">Cart</a>
+                <a class="icon-btn" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
+                <a class="icon-btn" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
+                <a class="icon-btn" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
             </div>
         </div>
     </header>
 
-    <div class="promo">Because Every Woman Deserves to Shine • خصومات تصل إلى 50% • توصيل داخل مصر خلال 2–10 أيام عمل</div>
+    <div class="promo">لأن كل امرأة تستحق أن تتألق • خصومات تصل إلى 50% • توصيل داخل مصر خلال 2–10 أيام عمل</div>
 
     <section class="hero">
         <div class="container hero-wrap">
             <div class="hero-main">
-                <span class="badge">✨ Because Every Woman Deserves to Shine</span>
+                <span class="badge">✨ لأن كل امرأة تستحق أن تتألق</span>
                 <h1>أفخم فساتين السهرة والزفاف في مصر بأسعار تنافسية</h1>
                 <p class="lead">اختاري إطلالتك القادمة من مجموعة فساتين مختارة بعناية، أو ابدئي بيع فستانك الآن وحوّليه لكاش بسرعة على Styliiiish.</p>
                 <div class="actions">
@@ -667,7 +667,7 @@
                 <a class="chip" href="/product-category/dress/evening-dresses/">فساتين سهرة</a>
                 <a class="chip" href="/product-category/dress/wedding-dress/">فساتين زفاف</a>
                 <a class="chip" href="/product-category/dress/engagement-dresses/">فساتين خطوبة</a>
-                <a class="chip" href="/product-category/used-dress/">Marketplace فساتين</a>
+                <a class="chip" href="/product-category/used-dress/">ماركت بليس الفساتين</a>
             </div>
         </div>
     </section>
@@ -742,61 +742,61 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <h4>Styliiiish Fashion House</h4>
-                <p>We work with a passion of taking challenges and creating new dress designs only for you.</p>
-                <p>Open Hours: Sat – Fri: 11:00 am – 7:00 pm.</p>
-                <p><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Get in Touch</a></p>
+                <h4>ستيليش فاشون هاوس</h4>
+                <p>نعمل بشغف على تقديم أحدث تصاميم الفساتين لتناسب كل مناسبة خاصة بك.</p>
+                <p>مواعيد العمل: السبت إلى الجمعة من 11:00 صباحًا حتى 7:00 مساءً.</p>
+                <p><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">تواصلي معنا</a></p>
             </div>
 
             <div class="footer-col">
-                <h5>Quick Links</h5>
+                <h5>روابط سريعة</h5>
                 <ul class="footer-links">
-                    <li><a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a></li>
-                    <li><a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">Blog</a></li>
-                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">Shop Dress</a></li>
-                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">Dress Rental</a></li>
-                    <li><a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">MarketPlace</a></li>
-                    <li><a href="https://styliiiish.com/categories/" target="_blank" rel="noopener">Categories</a></li>
-                    <li><a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">Sell Your Dress</a></li>
-                    <li><a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">My account</a></li>
+                    <li><a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a></li>
+                    <li><a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">المدونة</a></li>
+                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">تسوقي الفساتين</a></li>
+                    <li><a href="https://styliiiish.com/dress-rental-in-cairo/" target="_blank" rel="noopener">تأجير الفساتين</a></li>
+                    <li><a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a></li>
+                    <li><a href="https://styliiiish.com/categories/" target="_blank" rel="noopener">الأقسام</a></li>
+                    <li><a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a></li>
+                    <li><a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Official Info</h5>
+                <h5>معلومات رسمية</h5>
                 <ul class="footer-links">
-                    <li><a href="https://maps.app.goo.gl/MCdcFEcFoR4tEjpT8" target="_blank" rel="noopener">1 Nabil Khalil Street, Nasr City, Cairo, Egypt</a></li>
+                    <li><a href="https://maps.app.goo.gl/MCdcFEcFoR4tEjpT8" target="_blank" rel="noopener">1 شارع نبيل خليل، مدينة نصر، القاهرة، مصر</a></li>
                     <li><a href="tel:+201050874255">+2 010-5087-4255</a></li>
-                    <li><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Contact us</a></li>
+                    <li><a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">تواصل معنا</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h5>Legal</h5>
+                <h5>سياسات وقوانين</h5>
                 <ul class="footer-links">
-                    <li><a href="https://styliiiish.com/about-us/" target="_blank" rel="noopener">About Us</a></li>
-                    <li><a href="https://styliiiish.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-                    <li><a href="https://styliiiish.com/terms-conditions/" target="_blank" rel="noopener">Terms & Conditions</a></li>
-                    <li><a href="https://styliiiish.com/Marketplace-Policy/" target="_blank" rel="noopener">Marketplace Policy</a></li>
-                    <li><a href="https://styliiiish.com/refund-return-policy/" target="_blank" rel="noopener">Refund & Return Policy</a></li>
-                    <li><a href="https://styliiiish.com/styliiiish-faq/" target="_blank" rel="noopener">FAQ</a></li>
-                    <li><a href="https://styliiiish.com/shipping-delivery-policy/" target="_blank" rel="noopener">Shipping & Delivery Policy</a></li>
-                    <li><a href="https://styliiiish.com/%F0%9F%8D%AA-cookie-policy/" target="_blank" rel="noopener">Cookie Policy</a></li>
+                    <li><a href="https://styliiiish.com/about-us/" target="_blank" rel="noopener">من نحن</a></li>
+                    <li><a href="https://styliiiish.com/privacy-policy/" target="_blank" rel="noopener">سياسة الخصوصية</a></li>
+                    <li><a href="https://styliiiish.com/terms-conditions/" target="_blank" rel="noopener">الشروط والأحكام</a></li>
+                    <li><a href="https://styliiiish.com/Marketplace-Policy/" target="_blank" rel="noopener">سياسة الماركت بليس</a></li>
+                    <li><a href="https://styliiiish.com/refund-return-policy/" target="_blank" rel="noopener">سياسة الاسترجاع والاستبدال</a></li>
+                    <li><a href="https://styliiiish.com/styliiiish-faq/" target="_blank" rel="noopener">الأسئلة الشائعة</a></li>
+                    <li><a href="https://styliiiish.com/shipping-delivery-policy/" target="_blank" rel="noopener">سياسة الشحن والتوصيل</a></li>
+                    <li><a href="https://styliiiish.com/%F0%9F%8D%AA-cookie-policy/" target="_blank" rel="noopener">سياسة ملفات الارتباط</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="container footer-bottom">
-            <span>Copyright © {{ date('Y') }} Styliiiish | Powered by <a href="https://websiteflexi.com/" target="_blank" rel="noopener">Website Flexi</a></span>
+            <span>جميع الحقوق محفوظة © {{ date('Y') }} Styliiiish | تشغيل وتطوير <a href="https://websiteflexi.com/" target="_blank" rel="noopener">Website Flexi</a></span>
             <span><a href="https://styliiiish.com/" target="_blank" rel="noopener">styliiiish.com</a></span>
         </div>
 
         <div class="container footer-mini-nav">
-            <a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a>
-            <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">Shop</a>
-            <a href="https://styliiiish.com/cart/" target="_blank" rel="noopener">Cart</a>
-            <a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">My Account</a>
-            <a href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">Wishlist</a>
+            <a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
+            <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">المتجر</a>
+            <a href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
+            <a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
+            <a href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
         </div>
     </footer>
 
