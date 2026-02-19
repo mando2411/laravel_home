@@ -1347,7 +1347,7 @@
 
             <nav class="main-nav" aria-label="Main Navigation">
                 <a class="active" href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
-                <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">المتجر</a>
+                <a href="/shop">المتجر</a>
                 <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a>
                 <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a>
                 <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">المدونة</a>
@@ -1604,7 +1604,7 @@
 
         <div class="container footer-mini-nav">
             <a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
-            <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">المتجر</a>
+            <a href="/shop">المتجر</a>
             <a href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
             <a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
             <a href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
