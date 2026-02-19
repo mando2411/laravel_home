@@ -355,6 +355,10 @@
             z-index: 1;
         }
 
+        .hero-mobile-trust {
+            display: none;
+        }
+
         .hero-kpi {
             border: 1px solid var(--line);
             border-radius: 12px;
@@ -962,11 +966,25 @@
                 padding: 18px 0 20px;
             }
 
+            .hero-wrap {
+                gap: 12px;
+            }
+
             .hero-main,
             .hero-side {
                 border-radius: 14px;
                 padding: 16px;
                 box-shadow: 0 8px 20px rgba(23, 39, 59, 0.05);
+            }
+
+            .hero-main {
+                border-top: 3px solid var(--primary);
+                background: linear-gradient(165deg, #ffffff 0%, #fff2f3 100%);
+            }
+
+            .hero-side {
+                border-top: 3px solid var(--secondary);
+                background: #fff;
             }
 
             .badge {
@@ -978,6 +996,7 @@
             .hero-main h1 {
                 font-size: clamp(24px, 7.2vw, 31px);
                 margin-bottom: 8px;
+                line-height: 1.25;
             }
 
             .lead {
@@ -994,10 +1013,14 @@
                 margin-bottom: 10px;
             }
 
-            .actions .btn {
+            .hero-main .actions .btn {
                 width: 100%;
                 min-height: 44px;
                 font-size: 14px;
+            }
+
+            .hero-main .actions .btn-primary {
+                box-shadow: 0 8px 16px rgba(213, 21, 34, 0.22);
             }
 
             .hero-kpi {
@@ -1010,6 +1033,51 @@
 
             .hero-kpi span {
                 font-size: 11px;
+            }
+
+            .hero-kpis {
+                display: flex;
+                overflow-x: auto;
+                gap: 8px;
+                padding-bottom: 4px;
+                scroll-snap-type: x proximity;
+                scrollbar-width: none;
+            }
+
+            .hero-kpis::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hero-kpi {
+                min-width: 118px;
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+            }
+
+            .hero-mobile-trust {
+                margin-top: 6px;
+                display: flex;
+                overflow-x: auto;
+                gap: 8px;
+                scroll-snap-type: x proximity;
+                scrollbar-width: none;
+            }
+
+            .hero-mobile-trust::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hero-mobile-trust span {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                padding: 7px 10px;
+                border-radius: 999px;
+                background: #fff;
+                border: 1px solid var(--line);
+                font-size: 11px;
+                font-weight: 700;
+                color: var(--secondary);
+                white-space: nowrap;
             }
 
             .hero-side h3 {
@@ -1318,6 +1386,12 @@
                 <div class="actions">
                     <a class="btn btn-primary" href="/shop/">تسوقي الفساتين الآن</a>
                     <a class="btn btn-light" href="/my-dresses/">بيعي فستانك الآن</a>
+                </div>
+
+                <div class="hero-mobile-trust" aria-hidden="true">
+                    <span>🚚 شحن سريع</span>
+                    <span>💳 دفع آمن</span>
+                    <span>🔄 سياسات واضحة</span>
                 </div>
 
                 <div class="hero-kpis">
