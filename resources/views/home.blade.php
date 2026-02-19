@@ -1347,7 +1347,7 @@
 
             <nav class="main-nav" aria-label="Main Navigation">
                 <a class="active" href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
-                <a href="/mama">المتجر</a>
+                <a href="/shop">المتجر</a>
                 <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a>
                 <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a>
                 <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">المدونة</a>
@@ -1384,7 +1384,7 @@
                 </ul>
 
                 <div class="actions">
-                    <a class="btn btn-primary" href="/mama">تسوقي الفساتين الآن</a>
+                    <a class="btn btn-primary" href="/shop">تسوقي الفساتين الآن</a>
                     <a class="btn btn-light" href="/my-dresses/">بيعي فستانك الآن</a>
                 </div>
 
@@ -1463,7 +1463,7 @@
                     <h2 class="section-title">منتجات مختارة لك الآن</h2>
                     <p class="section-sub">أحدث الفساتين من المتجر مع إبراز العروض والخصومات</p>
                 </div>
-                <a class="btn btn-light" href="/mama">عرض كل المنتجات</a>
+                <a class="btn btn-light" href="/shop">عرض كل المنتجات</a>
             </div>
 
             <div class="grid">
@@ -1545,7 +1545,7 @@
         <h3>جاهزة تتألقي في مناسبتك القادمة؟</h3>
         <p>اكتشفي أجدد الموديلات والعروض الحصرية الآن، أو ارفعي فستانك للبيع في دقائق ووصول أسرع لآلاف المشترين في مصر.</p>
         <div class="actions">
-            <a class="btn btn-primary" href="/mama">ابدئي التسوق</a>
+            <a class="btn btn-primary" href="/shop">ابدئي التسوق</a>
             <a class="btn btn-light" href="/my-dresses/">ابدئي البيع</a>
         </div>
     </section>
@@ -1604,7 +1604,7 @@
 
         <div class="container footer-mini-nav">
             <a href="https://styliiiish.com/" target="_blank" rel="noopener">الرئيسية</a>
-            <a href="/mama">المتجر</a>
+            <a href="/shop">المتجر</a>
             <a href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
             <a href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
             <a href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
