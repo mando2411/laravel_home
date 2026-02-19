@@ -229,6 +229,14 @@
             touch-action: manipulation;
         }
 
+        .icon-btn .icon {
+            font-size: 16px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .icon-btn:hover {
             border-color: var(--primary);
             color: var(--primary);
@@ -927,6 +935,10 @@
                 border-radius: 8px;
             }
 
+            .icon-btn .icon {
+                font-size: 15px;
+            }
+
             .action-wishlist,
             .action-sell {
                 display: none;
@@ -1279,9 +1291,9 @@
                     <input class="search-input" type="search" name="s" placeholder="ابحثي عن فستانك..." aria-label="ابحثي عن فستانك">
                     <button class="search-btn" type="submit">بحث</button>
                 </form>
-                <a class="icon-btn action-account" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
-                <a class="icon-btn action-wishlist" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
-                <a class="icon-btn action-cart" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
+                <a class="icon-btn action-account" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener" aria-label="حسابي" title="حسابي"><span class="icon" aria-hidden="true">👤</span></a>
+                <a class="icon-btn action-wishlist" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener" aria-label="قائمة الأمنيات" title="قائمة الأمنيات"><span class="icon" aria-hidden="true">❤</span></a>
+                <a class="icon-btn action-cart" href="https://styliiiish.com/cart/" target="_blank" rel="noopener" aria-label="السلة" title="السلة"><span class="icon" aria-hidden="true">🛒</span></a>
                 <a class="btn btn-primary header-cta action-sell" href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">ابدئي البيع</a>
             </div>
         </div>
