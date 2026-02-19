@@ -1454,22 +1454,7 @@
         </div>
     </section>
 
-    <section class="section products-section">
-        <div class="container">
-            <div class="section-head">
-                <div>
-                    <h2 class="section-title">تسوقي حسب المناسبة</h2>
-                    <p class="section-sub">اختاري القسم المناسب بسرعة وابدئي الشراء مباشرة</p>
-                </div>
-            </div>
-            <div class="categories">
-                <a class="chip" href="/product-category/dress/evening-dresses/">فساتين سهرة</a>
-                <a class="chip" href="/product-category/dress/wedding-dress/">فساتين زفاف</a>
-                <a class="chip" href="/product-category/dress/engagement-dresses/">فساتين خطوبة</a>
-                <a class="chip" href="/product-category/used-dress/">ماركت بليس الفساتين</a>
-            </div>
-        </div>
-    </section>
+   
 
     <section class="section">
         <div class="container">
