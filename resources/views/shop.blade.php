@@ -100,7 +100,7 @@
 
             <nav class="nav" aria-label="Main Navigation">
                 <a href="/">الرئيسية</a>
-                <a class="active" href="/shop">المتجر</a>
+                <a class="active" href="/mama">المتجر</a>
                 <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">الماركت بليس</a>
                 <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">بيعي فستانك</a>
                 <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">المدونة</a>
@@ -121,13 +121,13 @@
         </section>
 
         <section class="toolbar">
-            <form class="search-form" method="GET" action="/shop">
+            <form class="search-form" method="GET" action="/mama">
                 <input class="search-input" type="search" name="q" value="{{ $search }}" placeholder="ابحثي عن منتج..." aria-label="ابحثي عن منتج">
                 <input type="hidden" name="sort" value="{{ $sort }}">
                 <button class="search-btn" type="submit">بحث</button>
             </form>
 
-            <form method="GET" action="/shop">
+            <form method="GET" action="/mama">
                 <input type="hidden" name="q" value="{{ $search }}">
                 <select class="sort" name="sort" onchange="this.form.submit()">
                     <option value="newest" {{ $sort === 'newest' ? 'selected' : '' }}>الأحدث</option>

@@ -86,7 +86,7 @@ Route::get('/', function () {
     return view('home', compact('products', 'stats'));
 });
 
-Route::get('/shop', function (Request $request) {
+Route::get('/mama', function (Request $request) {
     $search = trim((string) $request->query('q', ''));
     $sort = (string) $request->query('sort', 'newest');
 
