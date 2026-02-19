@@ -626,6 +626,10 @@
             gap: 8px;
         }
 
+        .products-section .grid {
+            align-items: stretch;
+        }
+
         .buy {
             margin-top: auto;
             display: inline-flex;
@@ -1064,7 +1068,8 @@
                 scroll-snap-align: start;
             }
 
-            .grid {
+            .products-section .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
             }
 
@@ -1082,42 +1087,54 @@
                 padding: 5px 8px;
             }
 
-            .content {
+            .products-section .content {
                 padding: 10px;
+                gap: 6px;
             }
 
-            .name {
+            .products-section .name {
                 min-height: auto;
-                font-size: 14px;
-                margin-bottom: 7px;
+                font-size: 13px;
+                line-height: 1.4;
+                -webkit-line-clamp: 2;
             }
 
-            .meta {
+            .products-section .meta {
                 font-size: 11px;
             }
 
-            .price {
-                font-size: 16px;
+            .products-section .price {
+                font-size: 15px;
             }
 
-            .save {
+            .products-section .old {
+                font-size: 12px;
+            }
+
+            .products-section .sale {
                 font-size: 10px;
                 padding: 4px 8px;
             }
 
-            .card-actions {
-                grid-template-columns: 1fr;
-                gap: 7px;
+            .products-section .save {
+                font-size: 10px;
+                padding: 4px 8px;
             }
 
-            .buy {
+            .products-section .card-actions {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .products-section .buy {
                 min-height: 42px;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+                font-size: 13px;
             }
 
-            .view-link {
+            .products-section .view-link {
                 min-height: 40px;
                 font-size: 12px;
             }
@@ -1186,7 +1203,6 @@
 
             .hero-wrap,
             .categories,
-            .grid,
             .trust,
             .stats,
             .footer-grid {
@@ -1213,6 +1229,15 @@
             .main-nav a {
                 font-size: 11px;
                 padding: 6px 9px;
+            }
+
+            .products-section .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-section .buy,
+            .products-section .view-link {
+                min-height: 38px;
             }
         }
     </style>
@@ -1343,7 +1368,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section products-section">
         <div class="container">
             <div class="section-head">
                 <div>
