@@ -49,6 +49,123 @@
             font-weight: 600;
         }
 
+        .topbar {
+            background: var(--secondary);
+            color: #fff;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .topbar-inner {
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .topbar-left,
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .topbar a {
+            color: #fff;
+            opacity: .92;
+        }
+
+        .topbar a:hover {
+            opacity: 1;
+        }
+
+        .main-header {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 40;
+        }
+
+        .main-header-inner {
+            min-height: 76px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .brand-title {
+            color: var(--secondary);
+            font-weight: 900;
+            letter-spacing: .3px;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .brand-tag {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 8px;
+            transition: .2s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary);
+            background: #fff4f5;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon-btn {
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--secondary);
+            border-radius: 10px;
+            min-width: 38px;
+            min-height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .icon-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
         .hero {
             padding: 56px 0 34px;
         }
@@ -401,6 +518,18 @@
         }
 
         @media (max-width: 980px) {
+            .main-header-inner {
+                grid-template-columns: 1fr;
+                padding: 12px 0;
+            }
+
+            .brand,
+            .main-nav,
+            .header-actions {
+                justify-content: center;
+                text-align: center;
+            }
+
             .hero-wrap,
             .categories,
             .grid,
@@ -431,6 +560,44 @@
     </style>
 </head>
 <body>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-right">
+                <strong>Call Anytime:</strong>
+                <a href="tel:+201050874255">+20 010 5087 4255</a>
+            </div>
+            <div class="topbar-left">
+                <a href="https://www.facebook.com/Styliiish.Egypt/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com/styliiish.egypt/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://g.page/styliish" target="_blank" rel="noopener">Google</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container main-header-inner">
+            <a class="brand" href="https://styliiiish.com/" target="_blank" rel="noopener">
+                <span class="brand-title">Styliiiish</span>
+                <span class="brand-tag">Because Every Woman Deserves to Shine</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="https://styliiiish.com/" target="_blank" rel="noopener">Home</a>
+                <a href="https://styliiiish.com/shop/" target="_blank" rel="noopener">Shop</a>
+                <a href="https://styliiiish.com/product-category/used-dress/" target="_blank" rel="noopener">MarketPlace</a>
+                <a href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">Sell Your Dress</a>
+                <a href="https://styliiiish.com/blog/" target="_blank" rel="noopener">Blog</a>
+                <a href="https://styliiiish.com/contact-us/" target="_blank" rel="noopener">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="icon-btn" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">Account</a>
+                <a class="icon-btn" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">Wishlist</a>
+                <a class="icon-btn" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">Cart</a>
+            </div>
+        </div>
+    </header>
+
     <div class="promo">Because Every Woman Deserves to Shine • خصومات تصل إلى 50% • توصيل داخل مصر خلال 2–10 أيام عمل</div>
 
     <section class="hero">
