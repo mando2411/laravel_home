@@ -483,7 +483,7 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
+            gap: 16px;
         }
 
         .card {
@@ -493,6 +493,18 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            transition: .25s ease;
+            box-shadow: 0 8px 20px rgba(23, 39, 59, 0.04);
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(23, 39, 59, 0.12);
+            border-color: rgba(213, 21, 34, 0.35);
+        }
+
+        .product-media {
+            position: relative;
         }
 
         .thumb {
@@ -500,17 +512,69 @@
             aspect-ratio: 3/4;
             object-fit: cover;
             background: #f2f2f5;
+            transition: .35s ease;
+        }
+
+        .card:hover .thumb {
+            transform: scale(1.03);
+        }
+
+        .card-badges {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .badge-chip {
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: 800;
+            line-height: 1;
+            backdrop-filter: blur(3px);
+            width: fit-content;
+        }
+
+        .badge-hot {
+            background: rgba(23, 39, 59, 0.86);
+            color: #fff;
+        }
+
+        .badge-discount {
+            background: rgba(213, 21, 34, 0.9);
+            color: #fff;
         }
 
         .content {
             padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         .name {
-            margin: 0 0 8px;
+            margin: 0;
             font-size: 15px;
             line-height: 1.45;
-            min-height: 44px;
+            min-height: 46px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
         }
 
         .prices {
@@ -518,7 +582,7 @@
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
         .price {
@@ -543,15 +607,54 @@
             font-weight: 700;
         }
 
+        .save {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: #fff3f4;
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .card-actions {
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
         .buy {
             margin-top: auto;
-            display: block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background: var(--primary);
             color: #fff;
-            text-align: center;
             padding: 10px;
             border-radius: 10px;
             font-weight: 700;
+            min-height: 42px;
+        }
+
+        .view-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--line);
+            color: var(--secondary);
+            border-radius: 10px;
+            min-height: 42px;
+            font-size: 13px;
+            font-weight: 700;
+            background: #fff;
+        }
+
+        .view-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
         .trust {
@@ -969,6 +1072,16 @@
                 border-radius: 14px;
             }
 
+            .card-badges {
+                top: 8px;
+                right: 8px;
+            }
+
+            .badge-chip {
+                font-size: 10px;
+                padding: 5px 8px;
+            }
+
             .content {
                 padding: 10px;
             }
@@ -979,8 +1092,22 @@
                 margin-bottom: 7px;
             }
 
+            .meta {
+                font-size: 11px;
+            }
+
             .price {
                 font-size: 16px;
+            }
+
+            .save {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            .card-actions {
+                grid-template-columns: 1fr;
+                gap: 7px;
             }
 
             .buy {
@@ -988,6 +1115,11 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .view-link {
+                min-height: 40px;
+                font-size: 12px;
             }
 
             .trust-item {
@@ -1245,23 +1377,50 @@
                         $regular = (float) ($product->regular_price ?? 0);
                         $isSale = $regular > 0 && $price > 0 && $regular > $price;
                         $discount = $isSale ? round((($regular - $price) / $regular) * 100) : 0;
+                        $saving = $isSale ? ($regular - $price) : 0;
                         $image = $product->image ?: 'https://styliiiish.com/wp-content/uploads/woocommerce-placeholder.png';
                     @endphp
 
                     <article class="card">
-                        <img class="thumb" src="{{ $image }}" alt="{{ $product->post_title }}" loading="lazy">
+                        <div class="product-media">
+                            <img class="thumb" src="{{ $image }}" alt="{{ $product->post_title }}" loading="lazy">
+                            <div class="card-badges">
+                                <span class="badge-chip badge-hot">مختارات مميزة</span>
+                                @if($isSale)
+                                    <span class="badge-chip badge-discount">خصم {{ $discount }}%</span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="content">
                             <h3 class="name">{{ $product->post_title }}</h3>
+                            <div class="meta">
+                                <span>متوفر الآن</span>
+                                <span>توصيل سريع</span>
+                            </div>
 
                             <div class="prices">
-                                <span class="price">{{ number_format($price) }} ج.م</span>
+                                <span class="price">
+                                    @if($price > 0)
+                                        {{ number_format($price) }} ج.م
+                                    @else
+                                        تواصل لمعرفة السعر
+                                    @endif
+                                </span>
                                 @if($isSale)
                                     <span class="old">{{ number_format($regular) }} ج.م</span>
                                     <span class="sale">خصم {{ $discount }}%</span>
                                 @endif
                             </div>
 
-                            <a class="buy" href="/product/{{ $product->post_name }}/">اطلبي الآن</a>
+                            @if($isSale)
+                                <span class="save">وفّري {{ number_format($saving) }} ج.م</span>
+                            @endif
+
+                            <div class="card-actions">
+                                <a class="buy" href="/product/{{ $product->post_name }}/">اطلبي الآن</a>
+                                <a class="view-link" href="/product/{{ $product->post_name }}/">معاينة المنتج</a>
+                            </div>
                         </div>
                     </article>
                 @endforeach
