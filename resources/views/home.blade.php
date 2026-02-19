@@ -169,6 +169,13 @@
             justify-content: flex-end;
         }
 
+        .action-account,
+        .action-wishlist,
+        .action-cart,
+        .action-sell {
+            white-space: nowrap;
+        }
+
         .search-form {
             display: flex;
             align-items: center;
@@ -683,6 +690,17 @@
                 width: 220px;
             }
 
+            .main-nav {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                scrollbar-width: thin;
+            }
+
+            .main-nav a {
+                white-space: nowrap;
+            }
+
             .hero-wrap,
             .categories,
             .grid,
@@ -707,6 +725,88 @@
             }
 
             .topbar-inner {
+                justify-content: center;
+                min-height: 36px;
+            }
+
+            .topbar-left {
+                display: none;
+            }
+
+            .topbar-right {
+                width: 100%;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .topbar-right strong {
+                font-size: 12px;
+            }
+
+            .main-header {
+                box-shadow: 0 6px 18px rgba(23, 39, 59, 0.08);
+            }
+
+            .main-header-inner {
+                grid-template-columns: 1fr auto;
+                gap: 10px;
+                min-height: auto;
+                padding: 10px 0;
+            }
+
+            .brand {
+                align-items: flex-start;
+                text-align: right;
+            }
+
+            .brand-title {
+                font-size: 21px;
+            }
+
+            .brand-tag {
+                font-size: 11px;
+            }
+
+            .main-nav {
+                grid-column: 1 / -1;
+                margin-top: 4px;
+                border-radius: 10px;
+                padding: 5px;
+                gap: 6px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .main-nav a {
+                font-size: 12px;
+                padding: 7px 10px;
+            }
+
+            .header-actions {
+                justify-content: flex-end;
+                gap: 6px;
+                flex-wrap: nowrap;
+            }
+
+            .search-form {
+                display: none;
+            }
+
+            .icon-btn {
+                min-width: 34px;
+                min-height: 34px;
+                padding: 0 8px;
+                font-size: 12px;
+                border-radius: 8px;
+            }
+
+            .action-wishlist,
+            .action-sell {
+                display: none;
+            }
+
+            .action-account,
+            .action-cart {
+                min-width: 46px;
                 justify-content: center;
             }
 
@@ -771,10 +871,10 @@
                     <input class="search-input" type="search" name="s" placeholder="ابحثي عن فستانك..." aria-label="ابحثي عن فستانك">
                     <button class="search-btn" type="submit">بحث</button>
                 </form>
-                <a class="icon-btn" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
-                <a class="icon-btn" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
-                <a class="icon-btn" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
-                <a class="btn btn-primary header-cta" href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">ابدئي البيع</a>
+                <a class="icon-btn action-account" href="https://styliiiish.com/my-account/" target="_blank" rel="noopener">حسابي</a>
+                <a class="icon-btn action-wishlist" href="https://styliiiish.com/wishlist/" target="_blank" rel="noopener">المفضلة</a>
+                <a class="icon-btn action-cart" href="https://styliiiish.com/cart/" target="_blank" rel="noopener">السلة</a>
+                <a class="btn btn-primary header-cta action-sell" href="https://styliiiish.com/my-dresses/" target="_blank" rel="noopener">ابدئي البيع</a>
             </div>
         </div>
     </header>
