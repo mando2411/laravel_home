@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
     <title>المتجر | Styliiiish</title>
     <style>
         :root {
@@ -277,8 +278,11 @@
                 emptyState.style.display = 'none';
 
                 const query = buildQuery();
-                const response = await fetch(`/shop/data?${query.toString()}`, {
-                    headers: { 'Accept': 'application/json' }
+                const response = await fetch(`/shop?${query.toString()}`, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
                 });
 
                 if (!response.ok) {

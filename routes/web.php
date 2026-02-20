@@ -138,51 +138,49 @@ $shopDataHandler = function (Request $request) {
 };
 
 $shopHandler = function (Request $request) use ($shopDataHandler) {
-    [, $search, $sort] = $shopDataHandler($request);
+    [$products, $search, $sort] = $shopDataHandler($request);
+
+    if ($request->expectsJson() || $request->wantsJson() || strtolower((string) $request->header('X-Requested-With')) === 'xmlhttprequest') {
+        $items = $products->getCollection()->map(function ($product) {
+            $price = (float) ($product->price ?? 0);
+            $regular = (float) ($product->regular_price ?? 0);
+            $isSale = $regular > 0 && $price > 0 && $regular > $price;
+            $discount = $isSale ? (int) round((($regular - $price) / $regular) * 100) : 0;
+            $saving = $isSale ? ($regular - $price) : 0;
+
+            return [
+                'id' => (int) $product->ID,
+                'title' => $product->post_title,
+                'slug' => $product->post_name,
+                'price' => $price,
+                'regular_price' => $regular,
+                'is_sale' => $isSale,
+                'discount' => $discount,
+                'saving' => $saving,
+                'image' => $product->image ?: 'https://styliiiish.com/wp-content/uploads/woocommerce-placeholder.png',
+            ];
+        })->values();
+
+        return response()->json([
+            'filters' => [
+                'q' => $search,
+                'sort' => $sort,
+            ],
+            'products' => $items,
+            'pagination' => [
+                'current_page' => $products->currentPage(),
+                'last_page' => $products->lastPage(),
+                'total' => $products->total(),
+                'from' => $products->firstItem(),
+                'to' => $products->lastItem(),
+                'per_page' => $products->perPage(),
+                'next_page' => $products->hasMorePages() ? $products->currentPage() + 1 : null,
+                'prev_page' => $products->onFirstPage() ? null : $products->currentPage() - 1,
+            ],
+        ]);
+    }
 
     return view('shop', compact('search', 'sort'));
 };
 
 Route::get('/shop', $shopHandler);
-
-Route::get('/shop/data', function (Request $request) use ($shopDataHandler) {
-    [$products, $search, $sort] = $shopDataHandler($request);
-
-    $items = $products->getCollection()->map(function ($product) {
-        $price = (float) ($product->price ?? 0);
-        $regular = (float) ($product->regular_price ?? 0);
-        $isSale = $regular > 0 && $price > 0 && $regular > $price;
-        $discount = $isSale ? (int) round((($regular - $price) / $regular) * 100) : 0;
-        $saving = $isSale ? ($regular - $price) : 0;
-
-        return [
-            'id' => (int) $product->ID,
-            'title' => $product->post_title,
-            'slug' => $product->post_name,
-            'price' => $price,
-            'regular_price' => $regular,
-            'is_sale' => $isSale,
-            'discount' => $discount,
-            'saving' => $saving,
-            'image' => $product->image ?: 'https://styliiiish.com/wp-content/uploads/woocommerce-placeholder.png',
-        ];
-    })->values();
-
-    return response()->json([
-        'filters' => [
-            'q' => $search,
-            'sort' => $sort,
-        ],
-        'products' => $items,
-        'pagination' => [
-            'current_page' => $products->currentPage(),
-            'last_page' => $products->lastPage(),
-            'total' => $products->total(),
-            'from' => $products->firstItem(),
-            'to' => $products->lastItem(),
-            'per_page' => $products->perPage(),
-            'next_page' => $products->hasMorePages() ? $products->currentPage() + 1 : null,
-            'prev_page' => $products->onFirstPage() ? null : $products->currentPage() - 1,
-        ],
-    ]);
-});
