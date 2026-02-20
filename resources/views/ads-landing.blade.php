@@ -11,9 +11,11 @@
             --secondary: #17273B;
             --bg: #f6f7fb;
             --card: #ffffff;
-            --line: rgba(189,189,189,.4);
+            --line: rgba(189, 189, 189, .4);
             --muted: #5a6678;
+            --success: #0a8f5b;
         }
+
         * { box-sizing: border-box; }
         body { margin: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; background: var(--bg); color: var(--secondary); }
         a { text-decoration: none; color: inherit; }
@@ -31,10 +33,13 @@
             grid-template-columns: 1.3fr .7fr;
             gap: 18px;
             align-items: center;
+            box-shadow: 0 16px 32px rgba(23,39,59,.08);
         }
+
         .badge { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 800; color: var(--primary); }
         h1 { margin: 12px 0 8px; font-size: clamp(28px, 5vw, 44px); line-height: 1.2; }
         .lead { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+
         .points { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 8px; }
         .points li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 13px; font-weight: 700; }
 
@@ -49,11 +54,102 @@
             border-radius: 16px;
             padding: 18px;
             text-align: center;
+            display: grid;
+            gap: 10px;
         }
+
         .promo-box strong { display: block; font-size: 34px; color: var(--primary); line-height: 1; }
         .promo-box span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
 
+        .mini-stat { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: #fff; }
+        .mini-stat b { color: var(--primary); font-size: 20px; display: block; }
+        .mini-stat small { color: var(--muted); font-size: 12px; }
+
         .section { padding: 8px 0 32px; }
+        .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+        .section-head h2 { margin: 0; font-size: clamp(22px, 3vw, 31px); }
+        .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+
+        .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 20px rgba(23,39,59,.05);
+            transition: .25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 30px rgba(23,39,59,.12);
+            border-color: rgba(213,21,34,.35);
+        }
+
+        .media { position: relative; }
+        .thumb { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: #f2f2f5; }
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(213,21,34,.9);
+            color: #fff;
+            border-radius: 999px;
+            padding: 5px 9px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .content { padding: 11px; display: flex; flex-direction: column; gap: 8px; height: 100%; }
+        .name {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.45;
+            min-height: 40px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .prices { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .price { color: var(--primary); font-size: 17px; font-weight: 900; }
+        .old { color: #8b8b97; text-decoration: line-through; font-size: 13px; }
+        .save { display: inline-flex; width: fit-content; padding: 4px 8px; border-radius: 999px; background: #f2fff8; color: var(--success); font-size: 11px; font-weight: 800; }
+
+        .card-actions { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .btn-buy, .btn-view {
+            min-height: 40px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+        }
+        .btn-buy { background: var(--primary); color: #fff; }
+        .btn-view { background: #fff; border: 1px solid var(--line); }
+
+        .bottom-cta {
+            margin-top: 16px;
+            background: linear-gradient(120deg, var(--secondary), #22354a);
+            color: #fff;
+            border-radius: 16px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-cta strong { font-size: 20px; }
+        .bottom-cta p { margin: 4px 0 0; color: #d7e0ed; font-size: 14px; }
+        .bottom-cta .btn-light { min-width: 180px; }
+
         .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
         .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
         .card h3 { margin: 0 0 6px; font-size: 17px; }
@@ -61,6 +157,7 @@
 
         @media (max-width: 900px) {
             .hero-wrap { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .cards { grid-template-columns: 1fr; }
         }
 
@@ -69,6 +166,13 @@
             .hero-wrap { padding: 16px; border-radius: 14px; }
             .lead { font-size: 14px; }
             .actions .btn { width: 100%; }
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+            .card-actions { grid-template-columns: 1fr; }
+            .bottom-cta .btn-light { width: 100%; }
+        }
+
+        @media (max-width: 390px) {
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -98,7 +202,79 @@
                 <aside class="promo-box">
                     <strong>50%</strong>
                     <span>خصم على مختارات مميزة</span>
+                    <div class="mini-stat">
+                        <b>{{ number_format((int) ($total ?? 0)) }}+</b>
+                        <small>منتج جاهز للطلب الآن</small>
+                    </div>
+                    <div class="mini-stat">
+                        <b>2-10 أيام</b>
+                        <small>توصيل داخل مصر</small>
+                    </div>
                 </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>اشتري الآن مباشرة</h2>
+                    <p>منتجات ظاهرة فورًا لتسهيل الشراء من الإعلانات بدون أي خطوات إضافية.</p>
+                </div>
+                <a class="btn btn-light" href="/shop">عرض كل المنتجات</a>
+            </div>
+
+            <div class="grid">
+                @foreach(($products ?? collect()) as $product)
+                    @php
+                        $price = (float) ($product->price ?? 0);
+                        $regular = (float) ($product->regular_price ?? 0);
+                        $isSale = $regular > 0 && $price > 0 && $regular > $price;
+                        $discount = $isSale ? round((($regular - $price) / $regular) * 100) : 0;
+                        $saving = $isSale ? ($regular - $price) : 0;
+                        $image = $product->image ?: 'https://styliiiish.com/wp-content/uploads/woocommerce-placeholder.png';
+                    @endphp
+
+                    <article class="product-card">
+                        <div class="media">
+                            <img class="thumb" src="{{ $image }}" alt="{{ $product->post_title }}" loading="lazy">
+                            @if($isSale)
+                                <span class="sale-badge">خصم {{ $discount }}%</span>
+                            @endif
+                        </div>
+                        <div class="content">
+                            <h3 class="name">{{ $product->post_title }}</h3>
+                            <div class="prices">
+                                <span class="price">
+                                    @if($price > 0)
+                                        {{ number_format($price) }} ج.م
+                                    @else
+                                        تواصل لمعرفة السعر
+                                    @endif
+                                </span>
+                                @if($isSale)
+                                    <span class="old">{{ number_format($regular) }} ج.م</span>
+                                @endif
+                            </div>
+
+                            @if($isSale)
+                                <span class="save">وفّري {{ number_format($saving) }} ج.م</span>
+                            @endif
+
+                            <div class="card-actions">
+                                <a class="btn-buy" href="/product/{{ $product->post_name }}/">اشتري الآن</a>
+                                <a class="btn-view" href="/product/{{ $product->post_name }}/">معاينة</a>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+
+            <div class="bottom-cta">
+                <div>
+                    <strong>جاهزة تختاري فستانك الآن؟</strong>
+                    <p>أكملي الشراء فورًا أو تصفحي المتجر بالكامل للحصول على خيارات أكثر.</p>
+                </div>
+                <a class="btn btn-light" href="/shop">الانتقال للمتجر الكامل</a>
             </div>
         </section>
 
