@@ -23,49 +23,49 @@
 
         .top { background: var(--secondary); color: #fff; text-align: center; padding: 10px 12px; font-size: 13px; }
 
-        .hero { padding: 34px 0 22px; }
+        .hero { padding: 10px 0 8px; }
         .hero-wrap {
             background: linear-gradient(160deg, #ffffff 0%, #fff4f5 100%);
             border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 28px;
+            border-radius: 14px;
+            padding: 14px;
             display: grid;
-            grid-template-columns: 1.3fr .7fr;
-            gap: 18px;
+            grid-template-columns: 1.45fr .55fr;
+            gap: 10px;
             align-items: center;
-            box-shadow: 0 16px 32px rgba(23,39,59,.08);
+            box-shadow: 0 10px 20px rgba(23,39,59,.06);
         }
 
-        .badge { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; font-size: 12px; font-weight: 800; color: var(--primary); }
-        h1 { margin: 12px 0 8px; font-size: clamp(28px, 5vw, 44px); line-height: 1.2; }
-        .lead { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+        .badge { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 800; color: var(--primary); }
+        h1 { margin: 8px 0 6px; font-size: clamp(22px, 3.3vw, 32px); line-height: 1.2; }
+        .lead { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
 
-        .points { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 8px; }
-        .points li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 13px; font-weight: 700; }
+        .points { margin: 0 0 10px; padding: 0; list-style: none; display: grid; gap: 6px; }
+        .points li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; font-size: 12px; font-weight: 700; }
 
-        .actions { display: flex; gap: 10px; flex-wrap: wrap; }
-        .btn { min-height: 44px; padding: 0 18px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; }
+        .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn { min-height: 38px; padding: 0 14px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
         .btn-primary { background: var(--primary); color: #fff; }
         .btn-light { background: #fff; border: 1px solid var(--line); }
 
         .promo-box {
             background: var(--card);
             border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 18px;
+            border-radius: 12px;
+            padding: 10px;
             text-align: center;
             display: grid;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .promo-box strong { display: block; font-size: 34px; color: var(--primary); line-height: 1; }
-        .promo-box span { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; }
+        .promo-box strong { display: block; font-size: 24px; color: var(--primary); line-height: 1; }
+        .promo-box span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-        .mini-stat { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: #fff; }
-        .mini-stat b { color: var(--primary); font-size: 20px; display: block; }
-        .mini-stat small { color: var(--muted); font-size: 12px; }
+        .mini-stat { border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: #fff; }
+        .mini-stat b { color: var(--primary); font-size: 16px; display: block; }
+        .mini-stat small { color: var(--muted); font-size: 11px; }
 
-        .section { padding: 8px 0 32px; }
+        .section { padding: 4px 0 28px; }
         .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
         .section-head h2 { margin: 0; font-size: clamp(22px, 3vw, 31px); }
         .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -162,9 +162,9 @@
         }
 
         @media (max-width: 640px) {
-            .hero { padding-top: 18px; }
-            .hero-wrap { padding: 16px; border-radius: 14px; }
-            .lead { font-size: 14px; }
+            .hero { padding-top: 6px; }
+            .hero-wrap { padding: 12px; border-radius: 12px; }
+            .lead { font-size: 13px; }
             .actions .btn { width: 100%; }
             .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
             .card-actions { grid-template-columns: 1fr; }
