@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/brand/logo 1200X1200PX.png">
+    <link rel="apple-touch-icon" href="/brand/logo 1200X1200PX.png">
     <title>عروض خاصة | Styliiiish</title>
     <style>
         :root {
@@ -37,6 +39,17 @@
         }
 
         .badge { display: inline-flex; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 800; color: var(--primary); }
+        .landing-brand {
+            display: inline-flex;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+        .landing-brand img {
+            height: 36px;
+            width: auto;
+            max-width: min(220px, 55vw);
+            object-fit: contain;
+        }
         h1 { margin: 8px 0 6px; font-size: clamp(22px, 3.3vw, 32px); line-height: 1.2; }
         .lead { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
 
@@ -164,6 +177,7 @@
         @media (max-width: 640px) {
             .hero { padding-top: 6px; }
             .hero-wrap { padding: 12px; border-radius: 12px; }
+            .landing-brand img { height: 30px; max-width: 180px; }
             .lead { font-size: 13px; }
             .actions .btn { width: 100%; }
             .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -183,6 +197,9 @@
         <section class="hero">
             <div class="hero-wrap">
                 <div>
+                    <a class="landing-brand" href="/" aria-label="Styliiiish Home">
+                        <img src="/brand/logo 1600X400PX.png" alt="Styliiiish">
+                    </a>
                     <span class="badge">عرض خاص من Styliiiish</span>
                     <h1>احجزي إطلالتك الآن بخصم يصل إلى 50%</h1>
                     <p class="lead">اكتشفي موديلات السهرة والزفاف والخطوبة الأكثر طلبًا مع توصيل سريع داخل مصر وسياسات واضحة.</p>

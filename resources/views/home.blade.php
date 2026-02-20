@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/brand/logo 1200X1200PX.png">
+    <link rel="apple-touch-icon" href="/brand/logo 1200X1200PX.png">
     <title>ستيليش | فساتين سهرة وزفاف في مصر</title>
     <style>
         :root {
@@ -117,12 +120,11 @@
             gap: 2px;
         }
 
-        .brand-title {
-            color: var(--secondary);
-            font-weight: 900;
-            letter-spacing: .4px;
-            font-size: 24px;
-            line-height: 1;
+        .brand-logo {
+            height: 40px;
+            width: auto;
+            max-width: min(220px, 38vw);
+            object-fit: contain;
         }
 
         .brand-tag {
@@ -892,8 +894,9 @@
                 text-align: center;
             }
 
-            .brand-title {
-                font-size: 21px;
+            .brand-logo {
+                height: 34px;
+                max-width: 190px;
             }
 
             .brand-tag {
@@ -1302,8 +1305,9 @@
                 font-size: 11px;
             }
 
-            .brand-title {
-                font-size: 19px;
+            .brand-logo {
+                height: 30px;
+                max-width: 165px;
             }
 
             .main-nav a {
@@ -1341,7 +1345,7 @@
     <header class="main-header">
         <div class="container main-header-inner">
             <a class="brand" href="https://styliiiish.com/" target="_blank" rel="noopener">
-                <span class="brand-title">Styliiiish</span>
+                <img class="brand-logo" src="/brand/logo 1600X400PX.png" alt="Styliiiish">
                 <span class="brand-tag">لأن كل امرأة تستحق أن تتألق</span>
             </a>
 

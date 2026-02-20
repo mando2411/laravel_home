@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="/brand/logo 1200X1200PX.png">
+    <link rel="apple-touch-icon" href="/brand/logo 1200X1200PX.png">
     <title>المتجر | Styliiiish</title>
     <style>
         :root {
@@ -30,7 +32,7 @@
         .header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 40; }
         .header-inner { min-height: 74px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; }
         .brand { display: flex; flex-direction: column; gap: 2px; }
-        .brand-title { font-size: 23px; font-weight: 900; color: var(--secondary); }
+        .brand-logo { height: 38px; width: auto; max-width: min(210px, 40vw); object-fit: contain; }
         .brand-sub { font-size: 11px; color: var(--muted); }
 
         .nav { display: flex; justify-content: center; gap: 8px; padding: 5px; border: 1px solid var(--line); border-radius: 12px; background: #f9fbff; }
@@ -127,7 +129,7 @@
     <header class="header">
         <div class="container header-inner">
             <a class="brand" href="/">
-                <span class="brand-title">Styliiiish</span>
+                <img class="brand-logo" src="/brand/logo 1600X400PX.png" alt="Styliiiish">
                 <span class="brand-sub">لأن كل امرأة تستحق أن تتألق</span>
             </a>
 
