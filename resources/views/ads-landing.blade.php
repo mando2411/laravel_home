@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    @php
+        $wpLogo = 'https://styliiiish.com/wp-content/uploads/2025/11/ChatGPT-Image-Nov-2-2025-03_11_14-AM-e1762046066547.png';
+        $wpIcon = 'https://styliiiish.com/wp-content/uploads/2025/11/cropped-ChatGPT-Image-Nov-2-2025-03_11_14-AM-e1762046066547.png';
+    @endphp
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="/brand/icons.png">
-    <link rel="apple-touch-icon" href="/brand/icons.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ $wpIcon }}">
+    <link rel="apple-touch-icon" href="{{ $wpIcon }}">
     <title>عروض خاصة | Styliiiish</title>
     <style>
         :root {
@@ -198,7 +202,7 @@
             <div class="hero-wrap">
                 <div>
                     <a class="landing-brand" href="/" aria-label="Styliiiish Home">
-                        <img src="/brand/logo.png" alt="Styliiiish">
+                        <img src="{{ $wpLogo }}" alt="Styliiiish" onerror="this.onerror=null;this.src='/brand/logo.png';">
                     </a>
                     <span class="badge">عرض خاص من Styliiiish</span>
                     <h1>احجزي إطلالتك الآن بخصم يصل إلى 50%</h1>
