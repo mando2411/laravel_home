@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="192x192" href="/brand/logo 1200X1200PX.png">
-    <link rel="apple-touch-icon" href="/brand/logo 1200X1200PX.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/brand/icons.png">
+    <link rel="apple-touch-icon" href="/brand/icons.png">
     <title>عروض خاصة | Styliiiish</title>
     <style>
         :root {
@@ -198,7 +198,7 @@
             <div class="hero-wrap">
                 <div>
                     <a class="landing-brand" href="/" aria-label="Styliiiish Home">
-                        <img src="/brand/logo 1600X400PX.png" alt="Styliiiish">
+                        <img src="/brand/logo.png" alt="Styliiiish">
                     </a>
                     <span class="badge">عرض خاص من Styliiiish</span>
                     <h1>احجزي إطلالتك الآن بخصم يصل إلى 50%</h1>
