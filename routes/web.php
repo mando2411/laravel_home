@@ -184,3 +184,7 @@ $shopHandler = function (Request $request) use ($shopDataHandler) {
 };
 
 Route::get('/shop', $shopHandler);
+
+Route::get('/ads', function () {
+    return view('ads-landing');
+});
