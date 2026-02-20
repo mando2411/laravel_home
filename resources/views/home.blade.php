@@ -702,6 +702,62 @@
             font-size: 14px;
         }
 
+        .reviews-trust {
+            margin-top: 4px;
+        }
+
+        .reviews-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .reviews-head h3 {
+            margin: 0;
+            font-size: clamp(22px, 3vw, 30px);
+            color: var(--secondary);
+        }
+
+        .reviews-head p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .review-shot {
+            display: block;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #fff;
+            box-shadow: 0 8px 18px rgba(23, 39, 59, 0.06);
+            transition: .2s ease;
+        }
+
+        .review-shot:hover {
+            transform: translateY(-2px);
+            border-color: rgba(213, 21, 34, .3);
+            box-shadow: 0 12px 24px rgba(23, 39, 59, 0.12);
+        }
+
+        .review-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: #f2f2f5;
+            aspect-ratio: 4 / 3;
+        }
+
         .final-cta {
             background: linear-gradient(120deg, var(--secondary), #22354a);
             color: #fff;
@@ -835,6 +891,10 @@
             .grid,
             .trust {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .reviews-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
             .hero-points,
@@ -1160,6 +1220,10 @@
                 gap: 10px;
             }
 
+            .reviews-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
             .card {
                 border-radius: 14px;
             }
@@ -1320,6 +1384,10 @@
             }
 
             .products-section .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reviews-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1546,6 +1614,24 @@
                 <h4>💸 بيعي فستانك بسهولة</h4>
                 <p>حوّلي فستانك المستعمل إلى دخل إضافي عبر المنصة.</p>
             </article>
+        </div>
+    </section>
+
+    <section class="section reviews-trust">
+        <div class="container">
+            <div class="reviews-head">
+                <h3>تجارب حقيقية من Google Reviews</h3>
+                <p>آراء عملائنا بالصورة كما هي لبناء ثقة كاملة قبل الطلب.</p>
+            </div>
+
+            <div class="reviews-grid">
+                @for ($i = 1; $i <= 13; $i++)
+                    @php $reviewImage = sprintf('/google-reviews/review-%02d.png', $i); @endphp
+                    <a class="review-shot" href="{{ $reviewImage }}" target="_blank" rel="noopener" aria-label="Google Review {{ $i }}">
+                        <img src="{{ $reviewImage }}" alt="Google Review {{ $i }}" loading="lazy">
+                    </a>
+                @endfor
+            </div>
         </div>
     </section>
 
